@@ -1,0 +1,12 @@
+class UsernameValidator:
+    def __init__(self, username):
+        self.username = username
+
+    def clean_username(self):
+        cleaned = self.username.strip()
+        cleaned = cleaned.lower()
+        return cleaned
+
+user_input = input("Enter username: ")
+validator = UsernameValidator(user_input)
+print("Cleaned Username:", validator.clean_username())
